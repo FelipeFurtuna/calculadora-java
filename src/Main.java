@@ -31,15 +31,15 @@ public class Main {
                   System.out.println(resultado);
               } else if (opcao == 4) {
                   System.out.println("Digite o primeiro numero: ");
-                  int primeiro = sc.nextInt();
+                  double primeiro = sc.nextDouble();
                   System.out.println("Digite o segundo numero: ");
-                  int segundo = sc.nextInt();
+                  double segundo = sc.nextDouble();
                   if (segundo == 0) {
                       System.out.println("⚠\uFE0F Não é possivel dividir! ⚠\uFE0F ");
                       System.out.println("TENTE NOVAMENTE SUA OPERAÇÂO");
                       System.out.println("-----------------------------");
                   } else {
-                      int resultado = dividir(primeiro, segundo);
+                      double resultado = dividir(primeiro, segundo);
                       System.out.println(resultado);
                   }
               }
@@ -67,8 +67,8 @@ public class Main {
         int resultado = numero1 * numero2;
         return resultado;
     }
-    public static int dividir (int numero1, int numero2) {
-        int resultado = numero1 / numero2;
+    public static double dividir (double numero1, double numero2) {
+        double resultado = numero1 / numero2;
 
         return resultado;
     }
