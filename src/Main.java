@@ -27,6 +27,13 @@ public class Main {
             int segundo = sc.nextInt();
             int resultado = multiplicar(primeiro, segundo);
             System.out.println(resultado);
+        } else if (opcao ==4) {
+            System.out.println("Digite o primeiro numero: ");
+            int primeiro = sc.nextInt();
+            System.out.println("Digite o segundo numero: ");
+            int segundo = sc.nextInt();
+            int resultado = dividir(primeiro, segundo);
+            System.out.println(resultado);
         }
     }
 
@@ -49,6 +56,10 @@ public class Main {
     }
     public static int multiplicar (int numero1, int numero2) {
         int resultado = numero1 * numero2;
+        return resultado;
+    }
+    public static int dividir (int numero1, int numero2) {
+        int resultado = numero1 / numero2;
         return resultado;
     }
 }
