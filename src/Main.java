@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
           Scanner sc = new Scanner(System.in);
           int opcao = 1;
           do {
@@ -34,14 +35,21 @@ public class Main {
                   double primeiro = sc.nextDouble();
                   System.out.println("Digite o segundo numero: ");
                   double segundo = sc.nextDouble();
+                  //if dentro da opcao dividir nao confundir com os outros ifs de escolha de opcao
                   if (segundo == 0) {
                       System.out.println("⚠\uFE0F Não é possivel dividir! ⚠\uFE0F ");
                       System.out.println("TENTE NOVAMENTE SUA OPERAÇÂO");
                       System.out.println("-----------------------------");
+                      //fim do if
                   } else {
                       double resultado = dividir(primeiro, segundo);
                       System.out.println(resultado);
                   }
+              } else if (opcao == 0) {
+                  System.out.println("Encerrando a calculadora obrigado por utilizar...");
+                  System.out.println("finalizado!");
+              } else {
+                  System.out.println("⚠\uFE0FOPÇÃO INVALIDA INSIRA NOVAMENTE ⚠\uFE0F");
               }
           }   while (opcao !=0);
     }
