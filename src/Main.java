@@ -17,9 +17,10 @@ public class Main {
                   System.out.println("⚠\uFE0FOPÇÃO INVALIDA INSIRA NOVAMENTE ⚠\uFE0F");
                   continue;
               }
-               double primeiro = lerNumero(sc);//metodo pra ler numeros
 
-               double segundo = lerNumero(sc); // metodo pra ler numeros
+               double primeiro = lerNumero(sc, "Digite o primeiro numero: ");//metodo pra ler numeros
+
+               double segundo = lerNumero(sc, "Digite o segundo numero: "); // metodo pra ler numeros
 
               if (opcao == 1) {
                   double resultado = somar(primeiro, segundo);
@@ -71,8 +72,8 @@ public class Main {
 
         return resultado;
     }
-    public static double lerNumero (Scanner sc) {
-        System.out.println("Digite um numero: ");
+    public static double lerNumero (Scanner sc, String texto) {
+        System.out.println(texto);
         double numerolido = sc.nextDouble();
         return numerolido;
 
