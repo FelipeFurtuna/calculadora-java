@@ -18,18 +18,18 @@ public class Main {
                   continue;
               }
                 System.out.println("Digite o primeiro numero: ");
-               int primeiro = sc.nextInt();
+               double primeiro = sc.nextDouble();
                System.out.println("Digite o segundo numero: ");
-               int segundo = sc.nextInt();
+               double segundo = sc.nextDouble();
 
               if (opcao == 1) {
-                  int resultado = somar(primeiro, segundo);
+                  double resultado = somar(primeiro, segundo);
                   System.out.println(resultado);
               } else if (opcao == 2) {
-                  int resultado = subtrair(primeiro, segundo);
+                  double resultado = subtrair(primeiro, segundo);
                   System.out.println(resultado);
               } else if (opcao == 3) {
-                  int resultado = multiplicar(primeiro, segundo);
+                  double resultado = multiplicar(primeiro, segundo);
                   System.out.println(resultado);
               } else if (opcao == 4) {
                   //if dentro da opcao dividir nao confundir com os outros ifs de escolha de opcao
@@ -55,16 +55,16 @@ public class Main {
             System.out.println("0 - Sair");
     }
 
-    public static int somar(int numero1, int numero2) {
-        int resultado = numero1 + numero2;
+    public static double somar(double numero1, double numero2) {
+        double resultado = numero1 + numero2;
         return resultado;
     }
-    public static int subtrair(int numero1, int numero2) {
-        int resultado = numero1 - numero2;
+    public static double subtrair(double numero1, double numero2) {
+        double resultado = numero1 - numero2;
         return resultado;
     }
-    public static int multiplicar (int numero1, int numero2) {
-        int resultado = numero1 * numero2;
+    public static double multiplicar (double numero1, double numero2) {
+        double resultado = numero1 * numero2;
         return resultado;
     }
     public static double dividir (double numero1, double numero2) {
