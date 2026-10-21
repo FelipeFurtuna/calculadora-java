@@ -9,32 +9,29 @@ public class Main {
           do {
               mostrarMenu();
               opcao = sc.nextInt();
+              if (opcao == 0) {
+                  System.out.println("Encerrando a calculadora obrigado por utilizar...");
+                  System.out.println("finalizado!");
+                  break;
+              }  else if (opcao != 1 && opcao != 2 && opcao != 3 && opcao != 4) {
+                  System.out.println("⚠\uFE0FOPÇÃO INVALIDA INSIRA NOVAMENTE ⚠\uFE0F");
+                  continue;
+              }
+                System.out.println("Digite o primeiro numero: ");
+               int primeiro = sc.nextInt();
+               System.out.println("Digite o segundo numero: ");
+               int segundo = sc.nextInt();
+
               if (opcao == 1) {
-                  System.out.println("Digite o primeiro numero: ");
-                  int primeiro = sc.nextInt();
-                  System.out.println("Digite o segundo numero: ");
-                  int segundo = sc.nextInt();
                   int resultado = somar(primeiro, segundo);
                   System.out.println(resultado);
               } else if (opcao == 2) {
-                  System.out.println("Digite o primeiro numero: ");
-                  int primeiro = sc.nextInt();
-                  System.out.println("Digite o segundo numero: ");
-                  int segundo = sc.nextInt();
                   int resultado = subtrair(primeiro, segundo);
                   System.out.println(resultado);
               } else if (opcao == 3) {
-                  System.out.println("Digite o primeiro numero: ");
-                  int primeiro = sc.nextInt();
-                  System.out.println("Digite o segundo numero: ");
-                  int segundo = sc.nextInt();
                   int resultado = multiplicar(primeiro, segundo);
                   System.out.println(resultado);
               } else if (opcao == 4) {
-                  System.out.println("Digite o primeiro numero: ");
-                  double primeiro = sc.nextDouble();
-                  System.out.println("Digite o segundo numero: ");
-                  double segundo = sc.nextDouble();
                   //if dentro da opcao dividir nao confundir com os outros ifs de escolha de opcao
                   if (segundo == 0) {
                       System.out.println("⚠\uFE0F Não é possivel dividir! ⚠\uFE0F ");
@@ -45,11 +42,6 @@ public class Main {
                       double resultado = dividir(primeiro, segundo);
                       System.out.println(resultado);
                   }
-              } else if (opcao == 0) {
-                  System.out.println("Encerrando a calculadora obrigado por utilizar...");
-                  System.out.println("finalizado!");
-              } else {
-                  System.out.println("⚠\uFE0FOPÇÃO INVALIDA INSIRA NOVAMENTE ⚠\uFE0F");
               }
           }   while (opcao !=0);
     }
@@ -80,4 +72,5 @@ public class Main {
 
         return resultado;
     }
+
 }
