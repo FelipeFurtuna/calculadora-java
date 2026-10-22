@@ -24,13 +24,13 @@ public class Main {
 
               if (opcao == 1) {
                   double resultado = somar(primeiro, segundo);
-                  System.out.println(resultado);
+                  MostrarResultado(resultado); //metodo pra mostrar resultado
               } else if (opcao == 2) {
                   double resultado = subtrair(primeiro, segundo);
-                  System.out.println(resultado);
+                  MostrarResultado(resultado); // metodo pra mostrar resultado
               } else if (opcao == 3) {
                   double resultado = multiplicar(primeiro, segundo);
-                  System.out.println(resultado);
+                 MostrarResultado(resultado); // metodo pra mostrar resultado
               } else if (opcao == 4) {
                   //if dentro da opcao dividir nao confundir com os outros ifs de escolha de opcao
                   if (segundo == 0) {
@@ -40,7 +40,7 @@ public class Main {
                       //fim do if
                   } else {
                       double resultado = dividir(primeiro, segundo);
-                      System.out.println(resultado);
+                     MostrarResultado(resultado);
                   }
               }
           }   while (opcao !=0);
@@ -78,5 +78,7 @@ public class Main {
         return numerolido;
 
     }
-
+    public static void MostrarResultado (double resultado) {
+        System.out.println("Resultado: " + resultado);
+    }
 }
